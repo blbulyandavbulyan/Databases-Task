@@ -5,7 +5,7 @@ CREATE TABLE students(
     date_of_birth DATE NOT NULL,
     primary_skill VARCHAR(100) NOT NULL,
     created_datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    updated_timestamp TIMESTAMP NOT NULL
+    updated_timestamp TIMESTAMP
 );
 
 CREATE TABLE student_phones(
@@ -14,7 +14,7 @@ CREATE TABLE student_phones(
     FOREIGN KEY(student_id) REFERENCES students(student_id)
 );
 
-CREATE TABLE tutor(
+CREATE TABLE tutors(
     tutor_id BIGSERIAL NOT NULL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
 	surname VARCHAR(100) NOT NULL,
